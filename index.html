@@ -11,7 +11,19 @@
 <meta property="og:image" content="https://el-tecnico-que-cobra-mas.vercel.app/og.jpg">
 <meta name="theme-color" content="#121110">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23121110'/><text x='32' y='44' font-family='Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23F28A1E'>$</text></svg>">
-<!-- Píxel de Meta: pega aquí el código de tu píxel cuando lo tengas -->
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3072531926115631');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'El Tecnico que Cobra Mas',currency:'USD',value:9.90});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=3072531926115631&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -400,6 +412,14 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
   function upd(){ bar.classList.toggle('show', !ctaVis && !prVis); }
   new IntersectionObserver(function(e){ctaVis=e[0].isIntersecting;upd();}).observe(cta);
   new IntersectionObserver(function(e){prVis=e[0].isIntersecting;upd();},{threshold:0.15}).observe(pr);
+})();
+</script>
+<script>
+(function(){
+  function track(plan,value){ try{ if(window.fbq) fbq('track','InitiateCheckout',{content_name:'El Tecnico que Cobra Mas - '+plan,currency:'USD',value:value}); }catch(e){} }
+  var b=document.getElementById('cta-basico'), c=document.getElementById('cta-completo');
+  if(b) b.addEventListener('click',function(){track('Basico',9.90);});
+  if(c) c.addEventListener('click',function(){track('Completo',12.90);});
 })();
 </script>
 </body>
